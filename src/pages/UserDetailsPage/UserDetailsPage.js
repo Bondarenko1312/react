@@ -13,7 +13,7 @@ const UserDetailsPage = () => {
     }, [])
     return (
         <div className={'userDetails'}>
-            {user.filter(item => item.id === id).map(user => <UserDetails key={user.id} user={user}/>)}
+            {user.filter(item => item.id.toString() === id).map(user => <UserDetails key={user.id} user={user}/>)}
             <Outlet/>
         </div>
     );
